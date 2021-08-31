@@ -1,10 +1,15 @@
-import './App.css'
+import { Provider } from 'react-redux'
+import { BrowserRouter, Route } from 'react-router-dom'
+import MainWindow from './MainWindow'
+
 
 function App() {
   return (
-    <div className="App">
-
-    </div>
+    <Provider store={store}>
+      <BrowserRouter>
+        <Route path="/" component={MainWindow}/>
+      </BrowserRouter>
+    </Provider>
   )
 }
 
