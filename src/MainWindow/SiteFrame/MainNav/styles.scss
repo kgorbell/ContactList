@@ -1,3 +1,35 @@
+@import "../../../variables.scss";
+
 .MainNav {
-    border: 1px solid red;
+    height: 60px;
+    background-color: $black;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    color: white;
+    font-size: 28px;
+    letter-spacing: 3px;
+    padding: 0 20px;
+}
+
+.MainNav__title {
+    grid-column: 2;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+
+.MainNav__icon {
+    transition: $quick-ease;
+    grid-column: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.MainNav__icon:hover {
+    font-size: 30px;
+    cursor: pointer;
 }

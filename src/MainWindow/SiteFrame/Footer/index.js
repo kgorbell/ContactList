@@ -5,7 +5,7 @@ import './styles.scss'
 const Footer = () => {
     return (
         <div className="Footer">
-
+            2021 - Katie Gorbell
         </div>
     )
 }

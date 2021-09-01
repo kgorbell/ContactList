@@ -8,7 +8,9 @@ const SiteFrame = (props) => {
     return (
         <div className="SiteFrame">
             <MainNav/>
-            {props.children}
+            <div className="SiteFrame__content">
+                {props.children}
+            </div>
             <Footer/>
         </div>
     )
