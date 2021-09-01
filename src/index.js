@@ -3,11 +3,12 @@ import ReactDOM from 'react-dom'
 import './index.css'
 import App from './App'
 import reportWebVitals from './reportWebVitals'
-import { faTimes, faPlus } from "@fortawesome/free-solid-svg-icons"
+import { faTimes, faPlus, faAddressBook } from "@fortawesome/free-solid-svg-icons"
 import { library } from '@fortawesome/fontawesome-svg-core'
 
 library.add(faTimes)
 library.add(faPlus)
+library.add(faAddressBook)
 
 ReactDOM.render(
   <React.StrictMode>
