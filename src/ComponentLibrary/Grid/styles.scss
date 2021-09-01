@@ -1,5 +1,17 @@
 .Grid {
     display: grid;
-    grid-template-columns: repeat(3, auto);
+    grid-template-columns: repeat(1, auto);
     grid-gap: 20px;
+}
+
+@media (min-width: 900px) {
+    .Grid {
+        grid-template-columns: repeat(2, auto);
+    }
+}
+
+@media (min-width: 1200px) {
+    .Grid {
+        grid-template-columns: repeat(3, auto);
+    }
 }

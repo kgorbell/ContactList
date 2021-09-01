@@ -1,5 +1,44 @@
+@import "../../variables.scss";
+
 .ContactCard {
-    padding: 20px;
-    border: 1px solid black;
+    padding: 20px 20px 10px;
+    border: 1px solid $medium-grey;
+    border-radius: 5px;
+    background-color: white;
     width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.ContactCard__title {
+    font-size: 20px;
+    font-style: italic;
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.ContactCard__toggle {
+    margin-top: 5px;
+    font-size: 14px;
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: $quick-ease;
+    cursor: pointer;
+}
+
+.ContactCard__icon {
+    padding-left: 5px;
+    transition: $quick-ease;
+}
+
+.ContactCard__toggle:hover {
+    background-color: $light-grey;
+
+    .ContactCard__icon {
+        transform: scale(1.1);
+    }
 }

@@ -16,7 +16,7 @@ const ContactListPage = (props) => {
     const { contacts } = props
 
     return (
-        <Page>
+        <Page title="Contact List">
             <div className="ContactListPage">
                 <Grid>
                     {contacts.map((contact, i) => {
