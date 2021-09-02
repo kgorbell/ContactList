@@ -19,14 +19,12 @@ const EditContactModal = props => {
     const [ contact, updateContact ] = useState(props.contact)
 
     const handleUpdateContact = (value, name) => {
-        console.log("UPDATING", value)
         let newContact = { ...contact }
         newContact[name] = value
         updateContact(newContact)
     }
 
     const handleSubmit = () => {
-        console.log("CONTACT", contact)
         props.updateContact(contact)
         props.clearModalContent()
     }
