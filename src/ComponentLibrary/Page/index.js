@@ -3,9 +3,12 @@ import './styles.scss'
 
 
 const Page = (props) => {
-    const { children, title } = props
+    const { children, title, isForm } = props
+    let className="Page"
+    if (isForm) className += " Page--isForm"
+
     return (
-        <div className="Page">
+        <div className={className}>
             <div className="Page__bounds">
                 {title && <h1>{title}</h1>}
                 {children}

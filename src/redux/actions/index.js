@@ -2,6 +2,7 @@ import {
     SET_MODAL_CONTENT,
     CLEAR_MODAL_CONTENT,
     UPDATE_CONTACT,
+    CREATE_CONTACT,
 } from '../actionTypes';
 
 
@@ -16,5 +17,10 @@ export const clearModalContent = () => ({
 
 export const updateContact = (contact) => ({
     type: UPDATE_CONTACT,
+    payload: contact,
+})
+
+export const createContact = (contact) => ({
+    type: CREATE_CONTACT,
     payload: contact,
 })

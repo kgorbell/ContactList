@@ -2,6 +2,7 @@ import {
     SET_MODAL_CONTENT,
     CLEAR_MODAL_CONTENT,
     UPDATE_CONTACT,
+    CREATE_CONTACT,
 } from "../actionTypes"
 
 
@@ -22,6 +23,13 @@ const reducer = (state = {}, action) => {
             return {
                 ...state,
                 contacts,
+            }
+        case CREATE_CONTACT:
+            let newContacts = [ ...state.contacts ]
+            newContacts.push(action.payload)
+            return {
+                ...state,
+                contacts: newContacts,
             }
         default:
             return state
