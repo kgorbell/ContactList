@@ -1,16 +1,18 @@
 import React, { useState } from 'react'
 import { connect } from 'react-redux'
 import { Redirect } from 'react-router-dom'
-import { createContact } from '../../redux/actions'
+import { createContact, setModalContent } from '../../redux/actions'
 import Input from '../../ComponentLibrary/Input'
 import Button from '../../ComponentLibrary/Button'
 import Page from '../../ComponentLibrary/Page'
+import SuccessModal from '../../ComponentLibrary/SuccessModal'
 import './styles.scss'
 
 
 const mapDispatchToProps = dispatch => {
     return {
         createContact: (contact) => dispatch(createContact(contact)),
+        setModalContent: (content) => dispatch(setModalContent(content)),
     }
 }
 
@@ -28,6 +30,7 @@ const CreateContactPage = (props) => {
 
     const handleCreateContact = () => {
         props.createContact(contact)
+        props.setModalContent(<SuccessModal title="Great Success!" body={`You have successfully created a contact for ${contact.first} ${contact.last}`}/>)
         setRedirect("/")
     }
 
