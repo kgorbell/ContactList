@@ -24,7 +24,7 @@ const DeleteContactModal = props => {
     
     return (
         <div className="DeleteContactModal">
-            <h3>Delete Contact: {first} {last}</h3>
+            <h3>You are about to delete the contact, {first} {last}</h3>
             <div className="DeleteContactModal__buttons">
                 <Button label="Cancel" click={props.clearModalContent}/>
                 <Button purple label="Delete Contact" click={handleDelete}/>
