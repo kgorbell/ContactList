@@ -39,11 +39,11 @@ const Modal = props => {
 
 
     return (
-        <div className="Modal" ref={modal} onClick={(event) => handleClick(event)}>
+        <div className="Modal" onClick={(event) => handleClick(event.nativeEvent)}>
             {content &&
-                <div className="Modal__content">
+                <div className="Modal__content" ref={modal} >
                     {content}
-                    <div className="Modal__close"><FontAwesomeIcon icon="times"/></div>
+                    <div className="Modal__close" onClick={clearModalContent}><FontAwesomeIcon icon="times"/></div>
                 </div>
             }
         </div>

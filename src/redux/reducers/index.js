@@ -7,7 +7,6 @@ import {
 const reducer = (state = {}, action) => {
     switch(action.type) {
         case SET_MODAL_CONTENT:
-            console.log("HELLOW", action.payload)
             return {
                 ...state,
                 modalContent: action.payload,

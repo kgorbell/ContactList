@@ -1,0 +1,35 @@
+@import "../../../variables.scss";
+
+.Modal {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1000;
+    overflow-y: auto;
+    background-color: $overlay-dark;
+}
+
+.Modal__content {
+    position: relative;
+    min-width: 260px;
+    max-width: calc(100vw - 40px);
+    max-height: calc(100vh - 40px)
+}
+
+.Modal__close {
+    position: absolute;
+    top: -30px;
+    right: -10px;
+    color: black;
+    font-size: 24px;
+    transition: $quick-ease;
+    cursor: pointer;
+}
+
+.Modal__close:hover {
+    transform: scale(1.1);
+}

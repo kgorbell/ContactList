@@ -1,0 +1,10 @@
+@import "../../variables.scss";
+
+.EditContactModal {
+    @include modalBody()
+}
+
+.EditContactModal__buttons {
+    display: flex;
+    justify-content: flex-end;
+}

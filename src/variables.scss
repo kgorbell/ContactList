@@ -1,11 +1,24 @@
 // color scheme
 $black: rgb(21, 23, 30);
+$dark-grey: rgb(80, 80, 80);
 $light-grey: rgb(244, 244, 244);
 $medium-grey: rgb(222, 222, 222);
 
 //font-sizes
 $size-28-38: calc(28px + (38 - 28) * ((100vw) - 300px) / (2400 - 300));
+$size-22-32: calc(22px + (32 - 22) * ((100vw) - 300px) / (2400 - 300));
 
 
 // General styles
 $quick-ease: all .5s ease;
+$overlay-dark: rgba(107, 107, 107, .8);
+
+
+// Mixins
+@mixin modalBody() {
+    background-color: white;
+    border-radius: 8px;
+    border: 1px solid $light-grey;
+    padding: 30px 20px 20px;
+    font-size: 16px;
+}
