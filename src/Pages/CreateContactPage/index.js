@@ -42,7 +42,7 @@ const CreateContactPage = (props) => {
             <div className="CreateContactPage">
                 <Input
                     name="first" label="First Name" placeholder="Fist Name"
-                    onUpdate={handleUpdateContact}
+                    onUpdate={handleUpdateContact} autofocus
                 />
                 <Input
                     name="last" label="Last Name" placeholder="Last Name"

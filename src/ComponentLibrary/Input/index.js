@@ -3,7 +3,7 @@ import './styles.scss'
 
 
 const Input = props => {
-    const { label, placeholder, initialVal, name, onUpdate } = props
+    const { label, placeholder, initialVal, name, onUpdate, autofocus } = props
     const [ value, updateValue ] = useState(initialVal || null)
 
     const handleChange = (event) => {
@@ -20,6 +20,7 @@ const Input = props => {
                 placeholder={placeholder ? placeholder : ""}
                 value={value ? value : ""}
                 onChange={(event) => handleChange(event)}
+                autoFocus={!!autofocus}
             />
         </div>
     )
