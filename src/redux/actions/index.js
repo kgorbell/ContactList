@@ -27,6 +27,6 @@ export const createContact = (contact) => ({
 })
 
 export const deleteContact = (contactId) => ({
-    type: CREATE_CONTACT,
+    type: DELETE_CONTACT,
     payload: contactId,
 })
