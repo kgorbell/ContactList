@@ -19,10 +19,9 @@ const ContactListPage = (props) => {
         <Page title="Contact List">
             <div className="ContactListPage">
                 <Grid>
-                    {contacts.map((contact, i) => {
-                        const { first, last } = contact
+                    {contacts.map(contact => {
                         return (
-                            <ContactCard key={`${first}-${last}--${i}`} contact={contact}/>
+                            <ContactCard key={`${contact.first}--${contact.id}`} contact={contact}/>
                         )
                     })}
                 </Grid>

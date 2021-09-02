@@ -1,10 +1,16 @@
 @import "../../variables.scss";
 
 .EditContactModal {
-    @include modalBody()
+    @include modalBody();
 }
 
 .EditContactModal__buttons {
     display: flex;
     justify-content: flex-end;
+}
+
+@media (min-width: 600px) {
+    .EditContactModal {
+        min-width: 440px;
+    }
 }

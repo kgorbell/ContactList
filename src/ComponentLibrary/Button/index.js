@@ -9,7 +9,7 @@ const Button = props => {
     if (disabled) className += " Button--disabled"
     
     return (
-        <div className="Button" onClick={!disabled && click ? click : null}>
+        <div className={className} onClick={!disabled && click ? click : null}>
             {label}
         </div>
     )
