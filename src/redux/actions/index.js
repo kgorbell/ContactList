@@ -3,6 +3,7 @@ import {
     CLEAR_MODAL_CONTENT,
     UPDATE_CONTACT,
     CREATE_CONTACT,
+    DELETE_CONTACT,
 } from '../actionTypes';
 
 
@@ -23,4 +24,9 @@ export const updateContact = (contact) => ({
 export const createContact = (contact) => ({
     type: CREATE_CONTACT,
     payload: contact,
+})
+
+export const deleteContact = (contactId) => ({
+    type: CREATE_CONTACT,
+    payload: contactId,
 })

@@ -1,0 +1,10 @@
+@import "../../variables.scss";
+
+.DeleteContactModal {
+    @include modalBody()
+}
+
+.DeleteContactModal__buttons {
+    display: flex;
+    justify-content: flex-end;
+}

@@ -1,0 +1,18 @@
+@import "../../variables.scss";
+
+.SuccessModal {
+    @include modalBody();
+}
+
+.SuccessModal__icon {
+    color: green;
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 20px;
+}
+
+.SuccessModal__buttons {
+    display: flex;
+    justify-content: flex-end;
+}

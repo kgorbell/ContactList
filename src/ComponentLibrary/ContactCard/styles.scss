@@ -19,11 +19,9 @@
 .ContactCard__edit {
     display: flex;
     justify-content: flex-end;
-}
 
-.ContactCard__edit:hover {
-
-    .ContactCard__icon {
+    .ContactCard__icon:hover {
+        background-color: $light-grey;
         cursor: pointer;
         transform: scale(1.1);
     }

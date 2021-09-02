@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom'
 import './index.scss'
 import App from './App'
 import reportWebVitals from './reportWebVitals'
-import { faTimes, faPlus, faAddressBook, faChevronDown, faChevronUp, faEdit } from "@fortawesome/free-solid-svg-icons"
+import { faTimes, faPlus, faAddressBook, faChevronDown, faChevronUp, faEdit, faCheckCircle } from "@fortawesome/free-solid-svg-icons"
 import { library } from '@fortawesome/fontawesome-svg-core'
 
 library.add(faTimes)
@@ -12,6 +12,7 @@ library.add(faAddressBook)
 library.add(faChevronDown)
 library.add(faChevronUp)
 library.add(faEdit)
+library.add(faCheckCircle)
 
 ReactDOM.render(
   <React.StrictMode>

@@ -3,6 +3,7 @@ import {
     CLEAR_MODAL_CONTENT,
     UPDATE_CONTACT,
     CREATE_CONTACT,
+    DELETE_CONTACT,
 } from "../actionTypes"
 
 
@@ -31,6 +32,12 @@ const reducer = (state = {}, action) => {
                 ...state,
                 contacts: newContacts,
             }
+        case DELETE_CONTACT:
+            const updatedContacts = handleDeleteContact(state.contacts, action.payload)
+            return {
+                ...state,
+                contacts: updatedContacts,
+            }
         default:
             return state
     }
@@ -41,6 +48,10 @@ const handleUpdateContact = (array, contact) => {
     const selectedIndex = modifiedArray.findIndex((entry) => entry.id === contact.id)
     if (selectedIndex >= 0) modifiedArray[selectedIndex] = contact
     return modifiedArray
+}
+
+const handleDeleteContact = (array, id) => {
+    return array.filter(entry => entry.id !== id)
 }
 
 export default reducer
