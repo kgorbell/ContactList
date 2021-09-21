@@ -6,7 +6,9 @@
     display: grid;
     align-items: center;
     grid-template-columns: auto 1fr auto;
-    padding: 0 20px;
+    position: fixed;
+    top: 0;
+    width: 100vw;
 }
 
 .MainNav__title {
@@ -28,7 +30,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 10px;
+    padding: 10px 25px;
     color: white;
     font-size: 28px;
 }
