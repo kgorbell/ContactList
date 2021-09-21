@@ -3,7 +3,9 @@
 .MainNav {
     height: 60px;
     background-color: $black;
-    display: grid;
+    // display: grid;
+    display: flex;
+    justify-content: space-between;
     align-items: center;
     grid-template-columns: auto 1fr auto;
     position: fixed;

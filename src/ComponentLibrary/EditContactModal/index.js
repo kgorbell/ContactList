@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { connect } from 'react-redux'
-import { clearModalContent, updateContact } from '../../redux/actions'
+import { updateContact, setModalContent } from '../../redux/actions'
+import SuccessModal from '../SuccessModal'
 import Button from '../Button'
 import Input from '../Input'
 import './styles.scss'
@@ -8,13 +9,12 @@ import './styles.scss'
 
 const mapDispatchToProps = dispatch => {
     return {
-        clearModalContent: () => dispatch(clearModalContent()),
+        setModalContent: (content) => dispatch(setModalContent(content)),
         updateContact: (contact) => dispatch(updateContact(contact)),
     }
 }
 
 const EditContactModal = props => {
-    const { first, last, email, phone} = props.contact
 
     const [ contact, updateContact ] = useState(props.contact)
 
@@ -26,9 +26,10 @@ const EditContactModal = props => {
 
     const handleSubmit = () => {
         props.updateContact(contact)
-        props.clearModalContent()
+        props.setModalContent(<SuccessModal title="Great Success!" body={`Successfully Updated Contact, ${contact.first} ${contact.last}`}/>)
     }
 
+    const { first, last, email, phone} = props.contact
     return (
         <div className="EditContactModal">
             <h3 className="EditContactModal__title">Edit contact: {first} {last}</h3>

@@ -20,10 +20,13 @@
 
 .Button--purple {
     background-color: $purple;
+
+    &:hover {
+        background-color: $purple-hovered;
+    }
 }
 
 .Button--purple:hover {
-    background-color: $purple-hovered;
 } 
 
 .Button--disabled {

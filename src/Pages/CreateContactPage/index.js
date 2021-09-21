@@ -9,6 +9,12 @@ import SuccessModal from '../../ComponentLibrary/SuccessModal'
 import './styles.scss'
 
 
+const mapStateToProps = state => {
+    return {
+        contacts: state.contacts
+    }
+}
+
 const mapDispatchToProps = dispatch => {
     return {
         createContact: (contact) => dispatch(createContact(contact)),
@@ -35,7 +41,7 @@ const CreateContactPage = (props) => {
     }
 
     return (
-        <Page title="Create A Contact" isForm>
+        <Page title="Create A Contact" isForm> 
 
             {!!redirectTo && <Redirect to="/"/>}
 
@@ -66,4 +72,4 @@ const CreateContactPage = (props) => {
     )
 }
 
-export default connect(null, mapDispatchToProps)(CreateContactPage)
+export default connect(mapStateToProps, mapDispatchToProps)(CreateContactPage)

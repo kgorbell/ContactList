@@ -9,6 +9,7 @@ import './styles.scss'
 const mapStateToProps = state => {
     return {
         modalContent: state.modalContent,
+        contacts: state.contacts,
     }
 }
 
